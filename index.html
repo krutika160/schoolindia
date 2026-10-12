@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schoolsindia – School Management System</title>
+
+  <!-- Tailwind CSS (compiled output) -->
+  <link rel="stylesheet" href="dist/output.css?v=1.0"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <!-- Font Awesome (brand icons only) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <!-- Slick Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <style>
+    .testimonial-slider .slick-dots { display:flex!important; justify-content:center; gap:8px; margin-top:24px; list-style:none; padding:0; }
+    .testimonial-slider .slick-dots li button { font-size:0; width:11px; height:11px; border-radius:50%; background:#D9D9D94D; border:none; padding:0; cursor:pointer; transition:background .25s; }
+    .testimonial-slider .slick-dots li.slick-active button { background:#0070C9; border: 1px solid #ffffff; }
+    .testimonial-slider .slick-track { display:flex!important; }
+    .testimonial-slider .slick-slide { display:flex!important; height:auto; }
+    .testimonial-slider .slick-slide > div { display:flex; flex:1; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- ========== TOP BAR ========== -->
+<div class="bg-[#0070C9] text-white text-xs hidden md:flex items-center h-[60px]">
+  <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
+    <div class="flex items-center gap-0">
+      <span class="font-base tracking-wide text-white font-semibold">Join Us Now</span>
+      <img src="./img/white-arrow.svg" alt="arrow">
+      <div class="flex items-center gap-2 pl-3">
+        <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+          <i class="fab fa-facebook-f text-sm text-[#1877F2]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+          <i class="fab fa-twitter text-sm text-[#1877F2]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+          <i class="fab fa-linkedin-in text-sm text-[#1877F2]"></i>
+        </a>
+      </div>
+    </div>
+    <div class="flex gap-5 items-center">
+      <span class="flex items-center gap-1.5 font-medium text-base">
+        <img src="./img/clock.svg" alt="Clock"> 9:30 a.m - 4:30 p.m
+      </span>
+      <span class="flex items-center gap-1.5 font-medium text-base border-l border-r border-white px-4">
+        <img src="./img/msg-icon.svg" alt="Massage"><a href="mailto:info@schoolsindia.com">info@schoolsindia.com</a>
+      </span>
+      <span class="flex items-center gap-1.5 font-medium text-base">
+        <img src="./img/call-icon.svg" alt="Call"><a href="callto:+91 98765 43210">+91 98765 43210</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 py-2">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 font-bold text-2xl">
+        <img src="./img/Logo.png" alt="schoolsindia"/>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-700">
+
+        <!-- Home -->
+        <li>
+          <a href="#" class="block px-3 py-2 rounded-lg text-[#051229] text-[#051229] text-base font-semibold transition-all duration-200">Home</a>
+        </li>
+
+        <!-- About Us -->
+        <li>
+          <a href="#about" class="block px-3 py-2 rounded-lg transition-all text-[#051229] text-base duration-200 hover:text-[#051229]">About Us</a>
+        </li>
+
+        <!-- Services (dropdown) -->
+        <li class="relative group">
+          <a href="#services" class="flex items-center gap-1 px-3 py-2 text-[#051229] rounded-lg transition-all text-base duration-200 hover:text-[#051229]">
+            Services <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+          </a>
+          <ul class="absolute top-full left-0 mt-0 bg-white border border-gray-100 rounded-xl shadow-xl w-52 py-2 hidden group-hover:block z-50">
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">School Websites</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">School ERP</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Bulk SMS</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Contests</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Online Admission</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">School Search</a></li>
+          </ul>
+        </li>
+
+        <!-- Contest (dropdown) -->
+        <li class="relative group">
+          <a href="#" class="flex items-center text-base gap-1 px-3 py-2 rounded-lg text-[#051229] transition-all duration-200 hover:text-[#051229]">
+            Contest <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+          </a>
+          <ul class="absolute top-full left-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-xl w-64 py-2 hidden group-hover:block z-50">
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">23rd All India HOPE Talent Contest</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Results</a></li>
+          </ul>
+        </li>
+
+        <!-- Online Contest -->
+        <li>
+          <a href="#" class="block px-3 py-2 text-base rounded-lg transition-all duration-200 text-[#051229] hover:text-[#051229]">Online Contest</a>
+        </li>
+
+        <!-- Results -->
+        <li>
+          <a href="#" class="block px-3 py-2 text-base  rounded-lg transition-all duration-200 text-[#051229] hover:text-[#051229]">Results</a>
+        </li>
+
+        <!-- Contact -->
+        <li>
+          <a href="#contact" class="block px-4 text-base  py-2 rounded-lg transition-all duration-200 text-[#051229] hover:text-[#051229]">Contact</a>
+        </li>
+
+      </ul>
+
+      <!-- Right Actions -->
+      <div class="hidden lg:flex items-center gap-2">
+        <a href="#" class="px-2 pr-4 items-center py-2 text-[15px] font-medium text-white bg-[#051229] hover:bg-[#0070C9] rounded-[25px] flex gap-2 transition-all duration-300 ease-in-out"><img src="./img/arrow-icon.svg" class="bg-white rounded-[40px] p-1"> Get a Quote</a>
+      </div>
+
+      <!-- Mobile Toggler -->
+      <button id="menuBtn" class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors">
+        <i data-lucide="menu" class="w-5 h-5 text-gray-700"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu — hidden by default, JS toggles 'hidden' -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 pb-4 pt-2">
+      <ul class="flex flex-col gap-1 text-sm font-medium text-gray-700 mb-4">
+        <li><a href="#" class="block px-4 py-2 rounded-lg text-[#0070C9] font-semibold">Home</a></li>
+        <li><a href="#about" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">About Us</a></li>
+        <!-- Services -->
+        <li>
+          <details class="group">
+            <summary class="flex items-center justify-between px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 hover:text-[#0070C9] list-none">
+              Services <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+            </summary>
+            <ul class="pl-4 mt-1 flex flex-col gap-1">
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">School Websites</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">School ERP</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Bulk SMS</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Contests</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Online Admission</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">School Search</a></li>
+            </ul>
+          </details>
+        </li>
+        <!-- Contest -->
+        <li>
+          <details class="group">
+            <summary class="flex items-center justify-between px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 hover:text-[#0070C9] list-none">
+              Contest <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+            </summary>
+            <ul class="pl-4 mt-1 flex flex-col gap-1">
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">23rd All India HOPE Talent Contest</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Results</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="#" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">Online Contest</a></li>
+        <li><a href="#" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">Results</a></li>
+        <li><a href="#contact" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero-bg min-h-[88vh] flex items-center overflow-hidden">
+  <div class="relative z-10 max-w-6xl mx-auto px-4 py-20 w-full">
+    <div class="grid lg:grid-cols-1 gap-12 items-center">
+      <div class="text-white">
+        <h1 class="text-4xl md:text-5xl lg:text-[65px] font-bold leading-tight mb-5">
+          School Management <br>
+          <span class="text-white">System</span>
+        </h1>
+        <p class="text-white text-[20px] mb-8 leading-relaxed font-medium max-w-lg">
+          Automate your school in less than 24 hours with completely web based and truly affordable
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="px-2 pr-4 items-center py-1.5 text-[15px] font-medium text-black hover:text-white bg-white hover:bg-[#0070C9] rounded-[25px] flex gap-2 transition-all duration-300 ease-in-out"><img src="./img/white-arrow-icon.svg" class="bg-black rounded-[40px] p-1"> Get a Portfolio</a>
+          <a href="#" class="px-2 pr-4 items-center py-1.5 text-[15px] font-medium text-white hover:text-white bg-white/25 hover:bg-[#0070C9] rounded-[25px] flex gap-2 transition-all duration-300 ease-in-out"><img src="./img/arrow-icon.svg" class="bg-white rounded-[40px] p-1"> Enquiry</a>
+        
+        </div>
+      </div>
+      <div class="text-center">
+        <img src="img/hero-student.png" alt="Student" class="float-anim mx-auto max-h-[420px] drop-shadow-2xl" onerror="this.style.display='none'"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SEARCH / DISCOVER SECTION ========== -->
+<section class="py-16 bg-[#0070C90A]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl md:text-[45px] font-semibold mb-0">Discover The Best Schools Near You</h2>
+    </div>
+
+    <!-- Search Box: 750px centered -->
+    <div class="mx-auto w-full max-w-[750px] bg-white border border-[#BFBFBF] rounded-sm overflow-hidden shadow-md">
+
+      <!-- Tabs Row -->
+      <div class="flex p-10 pb-0">
+        <button onclick="switchTab('school-name')" id="tab-school-name"
+          class="cursor-pointer search-tab flex-1 py-1.5 text-sm font-medium text-[#051229] bg-white border-b-2 border-[#0070C9] transition-all duration-200">
+          School Name
+        </button>
+        <button onclick="switchTab('city')" id="tab-city"
+          class="cursor-pointer search-tab flex-1 py-1.5 text-sm font-medium text-[#051229] bg-white border-b-2 border-b-transparent hover:text-[#0070C9] transition-all duration-200">
+          City
+        </button>
+        <button onclick="switchTab('school-type')" id="tab-school-type"
+          class="cursor-pointer search-tab flex-1 py-1.5 text-sm font-medium text-[#051229] bg-white border-b-2 border-b-transparent hover:text-[#0070C9] transition-all duration-200">
+          School Type
+        </button>
+        <button onclick="switchTab('school-board')" id="tab-school-board"
+          class="cursor-pointer search-tab flex-1 py-1.5 text-sm font-medium text-[#051229] bg-white border-b-2 border-b-transparent hover:text-[#0070C9] transition-all duration-200">
+          School Board
+        </button>
+      </div>
+
+      <!-- Tab Panels + Search Button -->
+      <div class="p-6 pt-4">
+
+        <!-- Panel: School Name (default active) -->
+        <div id="panel-school-name" class="search-panel">
+          <input type="text" placeholder="Search school name..."
+            class="bg-[#0070C90A] w-full px-4 h-[50px] py-3 rounded-lg border border-[#BFBFBF] text-[17px] focus:border-[#0070C9] focus:ring-2 focus:ring-[#0070C9]/20 outline-none transition-all placeholder:text-[#051229]"/>
+        </div>
+
+        <!-- Panel: City -->
+        <div id="panel-city" class="search-panel hidden">
+          <div class="relative">
+            <select class="appearance-none bg-[#0070C90A] w-full px-4 h-[50px] py-3 text-[#051229] rounded-lg border border-[#BFBFBF] text-[17px] focus:border-[#0070C9] focus:ring-2 focus:ring-[#0070C9]/20 outline-none transition-all placeholder:text-black pr-10 cursor-pointer">
+              <option value="">Select City</option>
+              <option>Mumbai</option>
+              <option>Delhi</option>
+              <option>Bangalore</option>
+              <option>Kolkata</option>
+              <option>Chennai</option>
+              <option>Hyderabad</option>
+              <option>Pune</option>
+            </select>
+            <img src="./img/down-arrow.svg" alt="" class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4"/>
+          </div>
+        </div>
+
+        <!-- Panel: School Type -->
+        <div id="panel-school-type" class="search-panel hidden">
+          <div class="relative">
+            <select class="appearance-none bg-[#0070C90A] w-full px-4 py-3 h-[50px] text-[#051229] rounded-lg border border-[#BFBFBF] text-[17px] focus:border-[#0070C9] focus:ring-2 focus:ring-[#0070C9]/20 outline-none transition-all placeholder:text-black pr-10 cursor-pointer">
+              <option value="">Select School Type</option>
+              <option>Government</option>
+              <option>Private</option>
+              <option>Semi-Government</option>
+              <option>International</option>
+              <option>Aided</option>
+            </select>
+            <img src="./img/down-arrow.svg" alt="" class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4"/>
+          </div>
+        </div>
+
+        <!-- Panel: School Board -->
+        <div id="panel-school-board" class="search-panel hidden">
+          <div class="relative">
+            <select class="appearance-none bg-[#0070C90A] w-full px-4 py-3 h-[50px] text-[#051229] rounded-lg border border-[#BFBFBF] text-[17px] focus:border-[#0070C9] focus:ring-2 focus:ring-[#0070C9]/20 outline-none transition-all placeholder:text-black pr-10 cursor-pointer">
+              <option value="">Select School Board</option>
+              <option>CBSE</option>
+              <option>ICSE</option>
+              <option>State Board</option>
+              <option>IB (International Baccalaureate)</option>
+              <option>IGCSE</option>
+            </select>
+            <img src="./img/down-arrow.svg" alt="" class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4"/>
+          </div>
+        </div>
+
+        <!-- Search Button -->
+        <div class="flex justify-center mt-5">
+          <button onclick="switchTab('school-board')" id="tab-school-board"
+            class="cursor-pointer search-tab px-2 pr-6 items-center py-2 text-[15px] font-medium text-white bg-[#051229] hover:bg-[#0070C9] rounded-[25px] 
+            flex gap-2 transition-all duration-300 ease-in-out">
+            <img src="./img/arrow-icon.svg" class="bg-white rounded-[40px] p-1"> Search
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== EXPLORE BY CITY ========== -->
+<section class="py-10 md:py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Heading -->
+    <div class="mb-10">
+      <h2 class="text-2xl md:text-[45px] font-semibold mb-2">Explore Schools By City</h2>
+      <p class="text-base font-medium">From metros to growing cities find schools that fit your needs</p>
+    </div>
+
+    <!-- Two Column: Image | City Cards -->
+    <div class="flex flex-col lg:flex-row gap-10 items-center">
+
+      <!-- Left: Illustration -->
+      <div class="w-full lg:w-[22%] flex-shrink-0">
+        <img src="./img/search-city.jpg" alt="Search City" class="w-full h-auto"/>
+      </div>
+
+      <!-- Right: City Cards + Load More -->
+      <div class="w-full lg:w-[78%]">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+          <div class="group transition-all duration-300 border border-[#79b4e3] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-4 text-center bg-[#f2f8fc] cursor-pointer">
+            <div class="flex items-center justify-center mb-3">
+              <img src="./img/delhi.png" alt="Delhi" class="h-14 w-auto"/>
+            </div>
+            <p class="font-medium text-sm text-[#364052]">Delhi</p>
+          </div>
+
+          <div class="group transition-all duration-300 border border-[#79b4e3] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-4 text-center bg-[#f2f8fc] cursor-pointer">
+            <div class="flex items-center justify-center mb-3">
+              <img src="./img/mumbai.png" alt="Mumbai" class="h-14 w-auto"/>
+            </div>
+            <p class="font-medium text-sm text-[#364052]">Mumbai</p>
+          </div>
+
+          <div class="group transition-all duration-300 border border-[#79b4e3] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-4 text-center bg-[#f2f8fc] cursor-pointer">
+            <div class="flex items-center justify-center mb-3">
+              <img src="./img/kolkata.png" alt="Kolkata" class="h-14 w-auto"/>
+            </div>
+            <p class="font-medium text-sm text-[#364052]">Kolkata</p>
+          </div>
+
+          <div class="group transition-all duration-300 border border-[#79b4e3] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-4 text-center bg-[#f2f8fc] cursor-pointer">
+            <div class="flex items-center justify-center mb-3">
+              <img src="./img/pune.png" alt="Pune" class="h-14 w-auto"/>
+            </div>
+            <p class="font-medium text-sm text-[#364052]">Pune</p>
+          </div>
+
+          <div class="group transition-all duration-300 border border-[#79b4e3] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-4 text-center bg-[#f2f8fc] cursor-pointer">
+            <div class="flex items-center justify-center mb-3">
+              <img src="./img/Bangalore.png" alt="Bangalore" class="h-14 w-auto"/>
+            </div>
+            <p class="font-medium text-sm text-[#364052]">Bangalore</p>
+          </div>
+
+          <div class="group transition-all duration-300 border border-[#79b4e3] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-4 text-center bg-[#f2f8fc] cursor-pointer">
+            <div class="flex items-center justify-center mb-3">
+              <img src="./img/delhi.png" alt="Hyderabad" class="h-14 w-auto"/>
+            </div>
+            <p class="font-medium text-sm text-[#364052]">Hyderabad</p>
+          </div>
+        </div>
+
+        <!-- Load More -->
+        <div class="flex justify-center mt-6">
+          <a href="#" class="flex items-center gap-2 px-2 pr-4 py-2 text-[15px] font-medium text-white bg-[#051229] hover:bg-[#0070C9] rounded-[25px] transition-all duration-300">
+            <img src="./img/arrow-icon.svg" class="bg-white rounded-full p-1"/> Load more
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== ABOUT / WELCOME SECTION ========== -->
+<section class="py-6 bg-[#0070C90D]" id="about">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-1 items-center">
+      <div>
+        <h2 class="text-2xl md:text-[45px] font-semibold mb-2">Welcome To <span class="text-[#0070C9]">Schoolsindia</span></h2>
+        <p class="text-base font-medium mb-4 leading-relaxed">
+          We are a leading service provider of Educational Portal, School Management System Software, Bulk SMS to parents & teachers and Designer & Developer of Websites for schools, we also offer domain name registration, Web-Hosting, Server Space and Annual Maintenance.
+        </p>
+        <p class="text-base font-medium mb-6 leading-relaxed">
+          Schoolsindia specialises in IT and skills evaluation services for the educational industry.Our journey began on 15th December 1999 in the name of Vision India Educational Systems. Soon we established and registered the trademark name of Schoolsindia.
+        </p>
+        <div class="flex justify-start">
+          <a href="#" class="flex items-center gap-2 px-2 pr-4 py-2 text-[15px] font-medium text-white bg-[#051229] hover:bg-[#0070C9] rounded-[25px] transition-all duration-300">
+            <img src="./img/arrow-icon.svg" class="bg-white rounded-full p-1"/> Know more
+          </a>
+        </div>
+      </div>
+      <div class="text-center">
+        <img src="img/welcome-student.png" alt="School" class="mx-auto max-h-96 rounded-2xl"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES SECTION ========== -->
+<section class="py-16 bg-white" id="services">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl md:text-[45px] font-semibold mb-2">Our Services </h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+
+      <!-- group on card → group-hover on icon wrap & icon -->
+      <div class="group transition-all duration-300 border-1 border-[#CED7E0] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-3 text-center bg-white">
+        <img src="./img/school-websites.png" class="w-full" alt="School Website">
+        <h5 class="font-medium pt-3 text-[16px] md:text-[20px] text-left">School Website</h5>
+      </div>
+      <div class="group transition-all duration-300 border-1 border-[#CED7E0] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-3 text-center bg-white">
+        <img src="./img/school-erp.png" class="w-full" alt="school ERP">
+        <h5 class="font-medium pt-3 text-[16px] md:text-[20px] text-left">School ERP</h5>
+      </div>
+      <div class="group transition-all duration-300 border-1 border-[#CED7E0] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-3 text-center bg-white">
+        <img src="./img/online-admission.png" class="w-full" alt="Online admission">
+        <h5 class="font-medium pt-3 text-[16px] md:text-[20px] text-left">Online admission</h5>
+      </div>
+      <div class="group transition-all duration-300 border-1 border-[#CED7E0] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-3 text-center bg-white">
+        <img src="./img/school-search.png" class="w-full" alt="School Search">
+        <h5 class="font-medium pt-3 text-[16px] md:text-[20px] text-left">School Search</h5>
+      </div>
+      <div class="group transition-all duration-300 border-1 border-[#CED7E0] hover:border-[#4e7df4] hover:-translate-y-2 hover:shadow-[0_16px_36px_rgba(78,125,244,0.18)] rounded-sm p-3 text-center bg-white">
+        <img src="./img/contest.png" class="w-full" alt="Contests">
+        <h5 class="font-medium pt-3 text-[16px] md:text-[20px] text-left">Contests</h5>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS SECTION ========== -->
+<section class="stats-bg py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-8 text-center text-white divide-y md:divide-y-0 md:divide-x divide-white/10">
+      <div class="py-6 md:py-0">
+        <p class="text-6xl font-semibold mb-2">25K</p>
+        <p class="text-[#A9B0B8] text-[16px] font-medium md:text-[20px] flex items-center justify-center gap-2">
+          Verified School Profiles
+        </p>
+      </div>
+      <div class="py-6 md:py-0">
+        <p class="text-6xl font-semibold mb-2">1.0M<span class="text-yellow-400">+</span></p>
+        <p class="text-[#A9B0B8] text-[16px] font-medium md:text-[20px] flex items-center justify-center gap-2">
+          Annual School Searches
+        </p>
+      </div>
+      <div class="py-6 md:py-0">
+        <p class="text-6xl font-semibold mb-2">15M</p>
+        <p class="text-[#A9B0B8] text-[16px] font-medium md:text-[20px] flex items-center justify-center gap-2">
+          Families Reached Across India
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SAMPLE PROJECTS ========== -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-[45px] font-semibold mb-2">Our Sample Projects</h2>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 justify-items-center items-center">
+      <div class="group transition-all duration-300 hover:-translate-y-2 p-0 text-center">
+        <img src="./img/logo1.png" />
+      </div>
+      <div class="group transition-all duration-300 hover:-translate-y-2 p-0 text-center">
+        <img src="./img/logo2.png" />
+      </div>
+      <div class="group transition-all duration-300 hover:-translate-y-2 p-0 text-center">
+        <img src="./img/logo3.png" />
+      </div>
+      <div class="group transition-all duration-300 hover:-translate-y-2 p-0 text-center">
+        <img src="./img/logo4.png" />
+      </div>
+      <div class="group transition-all duration-300 hover:-translate-y-2 p-0 text-center">
+        <img src="./img/logo5.png" />
+      </div>
+      <div class="group transition-all duration-300 hover:-translate-y-2 p-0 text-center">
+        <img src="./img/logo6.png" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="bg-image-testimonial py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl text-white font-bold mb-2">Clients testimonials</h2>
+    </div>
+    <div class="testimonial-slider">
+      <div class="bg-white border border-gray-100 rounded-sm p-6 h-full flex flex-col mx-3">
+        <div class="flex items-center gap-3 mb-4">
+          <div>
+            <p class="font-bold text-sm md:text-[20px] mb-1">J. Singh</p>
+            <p class="text-base text-[#939393]">Principal, Sunrise Academy</p>
+          </div>
+        </div>
+        <p class="text-[#364052] font-medium text-sm md:text-base leading-relaxed mb-4">Simply the best administrative software ! the ever changing world of data in our schools, ESM makes it easy to train new users, constantly, improves to meet demands, has outstanding support and is the best buy in the market.</p>
+        <div class="flex justify-between items-center"> 
+          <div class="flex gap-0.5 mb-0 bg-[#0070C91A] rounded-2xl p-2">
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+          </div>
+          <img src="./img/quate-icon.png" alt="">
+        </div> 
+      </div>
+      <div class="bg-white border border-gray-100 rounded-sm p-6 h-full flex flex-col mx-3">
+        <div class="flex items-center gap-3 mb-4">
+          <div>
+            <p class="font-bold text-sm md:text-[20px] mb-1">Ms Rita Singh</p>
+            <p class="text-base text-[#939393]">Principal, Indirapuram Public School, Indirapuram (UP)</p>
+          </div>
+        </div>
+        <p class="text-[#364052] font-medium text-sm md:text-base leading-relaxed mb-4">To watch each student become responsible is a great joy for us. All this happened because of schoolsindia.</p>
+        <div class="flex justify-between items-center"> 
+          <div class="flex gap-0.5 mb-0 bg-[#0070C91A] rounded-2xl p-2">
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+          </div>
+          <img src="./img/quate-icon.png" alt="">
+        </div> 
+      </div>
+      <div class="bg-white border border-gray-100 rounded-sm p-6 h-full flex flex-col mx-3">
+        <div class="flex items-center gap-3 mb-4">
+          <div>
+            <p class="font-bold text-sm md:text-[20px] mb-1">Shri. N. Santhosh Kumar</p>
+            <p class="text-base text-[#939393]">Principal, Indian Public School, Banglore (KA)</p>
+          </div>
+        </div>
+        <p class="text-[#364052] font-medium text-sm md:text-base leading-relaxed mb-4">Thank you so much Schoolsindia for all you services and advice & training, I really appreciate it and it has made the job so much easier. I have had a huge learning curve this year and now things are running so well I can thank PHOENIX Software.</p>
+        <div class="flex justify-between items-center"> 
+          <div class="flex gap-0.5 mb-0 bg-[#0070C91A] rounded-2xl p-2">
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+          </div>
+          <img src="./img/quate-icon.png" alt="">
+        </div> 
+      </div>
+      <div class="bg-white border border-gray-100 rounded-sm p-6 h-full flex flex-col mx-3">
+        <div class="flex items-center gap-3 mb-4">
+          <div>
+            <p class="font-bold text-sm md:text-[20px] mb-1">J. Singh</p>
+            <p class="text-base text-[#939393]">Principal, Sunrise Academy</p>
+          </div>
+        </div>
+        <p class="text-[#364052] font-medium text-sm md:text-base leading-relaxed mb-4">Simply the best administrative software ! the ever changing world of data in our schools, ESM makes it easy to train new users, constantly, improves to meet demands, has outstanding support and is the best buy in the market.</p>
+        <div class="flex justify-between items-center"> 
+          <div class="flex gap-0.5 mb-0 bg-[#0070C91A] rounded-2xl p-2">
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+            <i data-lucide="star" class="w-4 h-4 text-[#0070C9] fill-[#0070C9]"></i>
+          </div>
+          <img src="./img/quate-icon.png" alt="">
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA / CONTACT SECTION ========== -->
+<section class="py-10 bg-white" id="contact">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center">
+      <h2 class="text-2xl md:text-[45px] font-semibold mb-2">Do you plan to send secure and fast ?</h2>
+      <p class="text-[#364052] text-[15px] mb-8">Get a custom quote on your website services and business enquires from the experts at schoolsindia.com for FREE.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="shadow-sm bg-[#f8fafb] border-[#ced7e0] border-1 rounded-sm py-12 p-8">
+        <form class="grid sm:grid-cols-2 gap-4">
+          <input type="text" placeholder="Enter Your Name"
+            class="w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent placeholder:text-[#364052]"/>
+          <input type="email" placeholder="Email"
+            class="w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent placeholder:text-[#364052]"/>
+          <input type="tel" placeholder="Phone"
+            class="w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent placeholder:text-[#364052]"/>
+          <div class="relative">
+            <select class="w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent appearance-none text-[#364052] cursor-pointer pr-8">
+              <option value="" disabled selected>Select Type</option>
+              <option value="school">School Enquiry</option>
+              <option value="admission">Admission Query</option>
+              <option value="general">General Enquiry</option>
+              <option value="other">Other</option>
+            </select>
+            <img src="./img/down-arrow.svg" alt="" class="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 w-4 h-4"/>
+          </div>
+          <textarea rows="1" placeholder="Describe your project"
+            class="sm:col-span-2 w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent resize-none placeholder:text-[#364052]"></textarea>
+          <div class="sm:col-span-2 mt-3">
+             <button onclick="switchTab('school-board')" id="tab-school-board"
+              class="cursor-pointer search-tab px-2 pr-6 items-center py-2 text-[15px] font-medium text-white bg-[#051229] hover:bg-[#0070C9] rounded-[25px] 
+              flex gap-2 transition-all duration-300 ease-in-out">
+              <img src="./img/arrow-icon.svg" class="bg-white rounded-[40px] p-1"> Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="text-center">
+        <img src="img/contact-us.png" alt="Contact" class="mx-auto max-h-80"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LATEST NEWS ========== -->
+<div class="flex w-full">
+  <div class="bg-[#0070C9] text-white font-semibold text-[21px] px-6 flex items-center justify-center whitespace-nowrap flex-shrink-0">
+    Latest News
+  </div>
+  <div class="bg-[#e5f1fa] flex-1 overflow-hidden py-3 pb-1">
+    <marquee behavior="scroll" direction="left" scrollamount="5" class="text-[16px] text-black">
+      23rd All India HOPE Talent Contest (Art &amp; Essay) started on 20 June 2025 onwards &nbsp;<span style="color:#0070C9;">|</span>&nbsp; 23rd All India HOPE Talent Contest (Art &amp; Essay) &nbsp;<span style="color:#0070C9;">|</span>&nbsp; 23rd All India HOPE Talent Contest (Art &amp; Essay) started on 20 June 2025 onwards
+    </marquee>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-[#0d1b2a] pt-14 pb-0" id="guides">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+      <div class="lg:col-span-2 pr-10">
+        <a href="#" class="flex items-center gap-2 font-bold text-2xl mb-4">
+          <img src="./img/Logo.png">
+        </a>
+        <p class="text-white text-base leading-relaxed mb-5">
+          Our School Management Systems software caters to all the requirements of school including customization and database integration at any given time. Our other offerings include an SMS gateway for educational institutions.
+        </p>
+        <div class="social-wrap">
+          <p class="text-white mb-2">Follow Us</p>
+          <div class="flex items-center gap-2 pl-0">
+            <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+              <i class="fab fa-facebook-f text-sm text-[#1877F2]"></i>
+            </a>
+            <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+              <i class="fab fa-twitter text-sm text-[#1877F2]"></i>
+            </a>
+            <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+              <i class="fab fa-linkedin-in text-sm text-[#1877F2]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h6 class="text-white font-medium text-[19px] tracking-widest mb-4">Useful links</h6>
+        <ul class="flex flex-col gap-2.5 text-[16px] font-normal text-white">
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Home</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">About</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School search</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Contests</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School ERP</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Websites</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Contact us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="text-white font-medium text-[19px] tracking-widest mb-4">Services</h6>
+        <ul class="flex flex-col gap-2.5 text-sm font-normal text-white">
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School Website</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School ERP</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Online Admission</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School search</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Contests</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="text-white font-medium text-[19px] tracking-widest mb-4">Contact</h6>
+        <ul class="flex flex-col gap-3 text-sm font-normal text-white">
+          <li class="flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-whte flex-shrink-0"></i> +91 44 24511099
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-whte flex-shrink-0"></i> info@schoolsindia.com
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-whte flex-shrink-0"></i>  9:30 a.m - 4:30 p.m
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#041e3e] py-5 border-[#4b6785] border-t-1">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-white">
+        <p>Copyright ©Schoolsindia.com All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-blue-400 transition-colors">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top — hidden by default, JS toggles 'hidden' -->
+<a href="#" id="backToTop" class="hidden fixed bottom-8 right-8 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg shadow-blue-500/40 hover:bg-blue-700 transition-colors z-50">
+  <i data-lucide="arrow-up" class="w-5 h-5"></i>
+</a>
+
+<script>
+  // Search tab switcher
+  function switchTab(tab) {
+    document.querySelectorAll('.search-panel').forEach(p => p.classList.add('hidden'));
+    document.querySelectorAll('.search-tab').forEach(t => {
+      t.classList.remove('border-b-[#0070C9]', 'text-[#0070C9]');
+      t.classList.add('border-b-transparent', 'text-gray-500');
+    });
+    document.getElementById('panel-' + tab).classList.remove('hidden');
+    const active = document.getElementById('tab-' + tab);
+    active.classList.add('text-[#0070C9]', 'border-b-[#0070C9]');
+    active.classList.remove('border-b-transparent', 'text-gray-500');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  });
+</script>
+
+<!-- jQuery + Slick -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.testimonial-slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      responsive: [
+        { breakpoint: 1024, settings: { slidesToShow: 2 } },
+        { breakpoint: 640,  settings: { slidesToShow: 1 } }
+      ]
+    });
+  });
+
+  // Back to top — toggle Tailwind 'hidden' class
+  window.addEventListener('scroll', function () {
+    document.getElementById('backToTop').classList.toggle('hidden', window.scrollY <= 400);
+  });
+</script>
+</body>
+</html>

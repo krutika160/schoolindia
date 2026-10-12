@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Dropdown</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-10">
+
+  <div class="flex gap-10">
+
+    <!-- Dropdown 1 -->
+    <div class="relative block text-left w-40">
+      <button onclick="toggleDropdown(this)" 
+        class="w-full flex items-center justify-between text-[#051229]">
+        
+        <span class="selectedValue">Relevance</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/271/271210.png" 
+             class="w-3 mt-1">
+      </button>
+
+      <div class="dropdownMenu hidden mt-2 border-t border-[#C4E1E9] bg-white shadow rounded">
+        <ul class="p-2 flex flex-col gap-2">
+          <li onclick="selectOption(this)" class="cursor-pointer hover:text-blue-600">30</li>
+          <li onclick="selectOption(this)" class="cursor-pointer hover:text-blue-600">40</li>
+          <li onclick="selectOption(this)" class="cursor-pointer hover:text-blue-600">50</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dropdown 2 -->
+    <div class="relative block text-left w-40">
+      <button onclick="toggleDropdown(this)" 
+        class="w-full flex items-center justify-between text-[#051229]">
+        
+        <span class="selectedValue">Organization</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/271/271210.png" 
+             class="w-3 mt-1">
+      </button>
+
+      <div class="dropdownMenu hidden mt-2 border-t border-[#C4E1E9] bg-white shadow rounded">
+        <ul class="p-2 flex flex-col gap-2">
+          <li onclick="selectOption(this)" class="cursor-pointer hover:text-blue-600">School A</li>
+          <li onclick="selectOption(this)" class="cursor-pointer hover:text-blue-600">School B</li>
+          <li onclick="selectOption(this)" class="cursor-pointer hover:text-blue-600">School C</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script>
+    function toggleDropdown(button) {
+      const parent = button.closest(".relative");
+      const menu = parent.querySelector(".dropdownMenu");
+
+      // close other dropdowns
+      document.querySelectorAll(".dropdownMenu").forEach(m => {
+        if (m !== menu) m.classList.add("hidden");
+      });
+
+      // toggle current
+      menu.classList.toggle("hidden");
+    }
+
+    function selectOption(element) {
+      const parent = element.closest(".relative");
+
+      // update text
+      parent.querySelector(".selectedValue").innerText = element.innerText;
+
+      // close dropdown
+      parent.querySelector(".dropdownMenu").classList.add("hidden");
+    }
+
+    // close when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".relative")) {
+        document.querySelectorAll(".dropdownMenu").forEach(menu => {
+          menu.classList.add("hidden");
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

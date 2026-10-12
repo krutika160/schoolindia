@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* ─── Base ─────────────────────────────────────── */
+@layer base {
+  body {
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+/* ─── Components ────────────────────────────────── */
+@layer components {
+
+  /* Hero background image + light black overlay */
+  .hero-bg {
+    background-image: url('../img/main-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.10) 80%);
+  }
+
+  /* Stats dark gradient */
+  .stats-bg {
+    /* background: linear-gradient(135deg, #0d1b2a 0%, #1a3a6b 100%); */
+    background-image: url('../img/back-img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .bg-image-testimonial{
+    background-image: url('../img/testimonial.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .bg-image-testimonial::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(000,000,000,0.5);
+    z-index: 9;
+  }
+
+  /* Primary gradient button */
+  .btn-primary {
+    background: linear-gradient(135deg, #4e7df4, #1a5cce);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(78, 125, 244, 0.45);
+  }
+
+   .banner{
+      background-image: url(../img/banner-img.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    /* Add in your CSS file */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE & Edge */
+      scrollbar-width: none;     /* Firefox */
+    }
+}
+
+/* ─── Utilities ─────────────────────────────────── */
+@layer utilities {
+
+  /* Floating animation (used on hero image) */
+  .float-anim {
+    animation: float 4s ease-in-out infinite;
+  }
+}
+
+/* Keyframe defined outside layers (global scope) */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}

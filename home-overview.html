@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Overview</title>
+
+  <!-- Tailwind CSS (compiled output) -->
+  <link rel="stylesheet" href="./src/output.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <!-- Font Awesome (brand icons only) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <!-- Slick Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <style>
+    .banner-arrow{
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7486%) hue-rotate(149deg) brightness(125%) contrast(92%);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- ========== TOP BAR ========== -->
+<div class="bg-[#0070C9] text-white text-xs hidden md:flex items-center h-[60px]">
+  <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
+    <div class="flex items-center gap-0">
+      <span class="font-base tracking-wide text-white font-semibold">Join Us Now</span>
+      <img src="./img/white-arrow.svg" alt="arrow">
+      <div class="flex items-center gap-2 pl-3">
+        <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+          <i class="fab fa-facebook-f text-sm text-[#1877F2]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+          <i class="fab fa-twitter text-sm text-[#1877F2]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+          <i class="fab fa-linkedin-in text-sm text-[#1877F2]"></i>
+        </a>
+      </div>
+    </div>
+    <div class="flex gap-5 items-center">
+      <span class="flex items-center gap-1.5 font-medium text-base">
+        <img src="./img/clock.svg" alt="Clock"> 9:30 a.m - 4:30 p.m
+      </span>
+      <span class="flex items-center gap-1.5 font-medium text-base border-l border-r border-white px-4">
+        <img src="./img/msg-icon.svg" alt="Massage"><a href="mailto:info@schoolsindia.com">info@schoolsindia.com</a>
+      </span>
+      <span class="flex items-center gap-1.5 font-medium text-base">
+        <img src="./img/call-icon.svg" alt="Call"><a href="callto:+91 98765 43210">+91 98765 43210</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 py-2">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 font-bold text-2xl">
+        <img src="./img/Logo.png" alt="schoolsindia"/>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-700">
+
+        <!-- Home -->
+        <li>
+          <a href="#" class="block px-3 py-2 rounded-lg text-[#051229] text-[#051229] text-base font-semibold transition-all duration-200">Home</a>
+        </li>
+
+        <!-- About Us -->
+        <li>
+          <a href="#about" class="block px-3 py-2 rounded-lg transition-all text-[#051229] text-base duration-200 hover:text-[#051229]">About Us</a>
+        </li>
+
+        <!-- Services (dropdown) -->
+        <li class="relative group">
+          <a href="#services" class="flex items-center gap-1 px-3 py-2 text-[#051229] rounded-lg transition-all text-base duration-200 hover:text-[#051229]">
+            Services <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+          </a>
+          <ul class="absolute top-full left-0 mt-0 bg-white border border-gray-100 rounded-xl shadow-xl w-52 py-2 hidden group-hover:block z-50">
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">School Websites</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">School ERP</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Bulk SMS</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Contests</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Online Admission</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">School Search</a></li>
+          </ul>
+        </li>
+
+        <!-- Contest (dropdown) -->
+        <li class="relative group">
+          <a href="#" class="flex items-center text-base gap-1 px-3 py-2 rounded-lg text-[#051229] transition-all duration-200 hover:text-[#051229]">
+            Contest <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+          </a>
+          <ul class="absolute top-full left-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-xl w-64 py-2 hidden group-hover:block z-50">
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">23rd All India HOPE Talent Contest</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Results</a></li>
+          </ul>
+        </li>
+
+        <!-- Online Contest -->
+        <li>
+          <a href="#" class="block px-3 py-2 text-base rounded-lg transition-all duration-200 text-[#051229] hover:text-[#051229]">Online Contest</a>
+        </li>
+
+        <!-- Results -->
+        <li>
+          <a href="#" class="block px-3 py-2 text-base  rounded-lg transition-all duration-200 text-[#051229] hover:text-[#051229]">Results</a>
+        </li>
+
+        <!-- Contact -->
+        <li>
+          <a href="#contact" class="block px-4 text-base  py-2 rounded-lg transition-all duration-200 text-[#051229] hover:text-[#051229]">Contact</a>
+        </li>
+
+      </ul>
+
+      <!-- Right Actions -->
+      <div class="hidden lg:flex items-center gap-2">
+        <a href="#" class="px-2 pr-4 items-center py-2 text-[15px] font-medium text-white bg-[#051229] hover:bg-[#0070C9] rounded-[25px] flex gap-2 transition-all duration-300 ease-in-out"><img src="./img/arrow-icon.svg" class="bg-white rounded-[40px] p-1"> Get a Quote</a>
+      </div>
+
+      <!-- Mobile Toggler -->
+      <button id="menuBtn" class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors">
+        <i data-lucide="menu" class="w-5 h-5 text-gray-700"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu — hidden by default, JS toggles 'hidden' -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 pb-4 pt-2">
+      <ul class="flex flex-col gap-1 text-sm font-medium text-gray-700 mb-4">
+        <li><a href="#" class="block px-4 py-2 rounded-lg text-[#0070C9] font-semibold">Home</a></li>
+        <li><a href="#about" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">About Us</a></li>
+        <!-- Services -->
+        <li>
+          <details class="group">
+            <summary class="flex items-center justify-between px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 hover:text-[#0070C9] list-none">
+              Services <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+            </summary>
+            <ul class="pl-4 mt-1 flex flex-col gap-1">
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">School Websites</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">School ERP</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Bulk SMS</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Contests</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Online Admission</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">School Search</a></li>
+            </ul>
+          </details>
+        </li>
+        <!-- Contest -->
+        <li>
+          <details class="group">
+            <summary class="flex items-center justify-between px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 hover:text-[#0070C9] list-none">
+              Contest <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+            </summary>
+            <ul class="pl-4 mt-1 flex flex-col gap-1">
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">23rd All India HOPE Talent Contest</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Results</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="#" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">Online Contest</a></li>
+        <li><a href="#" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">Results</a></li>
+        <li><a href="#contact" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== BANNER SECTION ========== -->
+ <!-- Section -->
+  <section class="banner  relative  text-white py-8 lg:py-16 overflow-hidden">
+
+
+    <!-- Content -->
+    <div class=" max-w-7xl mx-auto px-4 flex items-center flex-col lg:flex-row gap-4 lg:gap-[40px] ">
+  
+      <!-- Image -->
+      <div class="w-32 h-32 flex-shrink-0">
+        <img src="/img/overview-img.png" alt="School"
+          class="w-full h-full object-cover rounded-lg">
+      </div>
+
+      <!-- Content -->
+      <div class="flex-1 flex flex-col gap-2 lg:gap-1">
+        
+        <!-- Breadcrumb -->
+       
+        <div class="flex justify-center lg:justify-start text-sm lg:text-[20px] font-normal items-center  gap-2  text-white">
+          <a href="#">Home </a>
+          <spn> <img src="img/arrow-icon.svg" class="banner-arrow filter [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(0%)_saturate(7486%)_hue-rotate(149deg)_brightness(125%)_contrast(92%)]"> </spn>
+          <a href="#">Best Schools In Delhi</a>
+        </div>
+
+        <!-- Title -->
+         <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-4">
+           <h2 class="text-[20px] lg:text-[30px] font-semibold mb-0">
+             Delhi Public School
+           </h2>
+           <span class="flex items-center gap-2 bg-[#5a77a27d] border border-[#0070c969] backdrop-blur-[11px] px-8 py-2 text-[15px] rounded-[40px] font-normal">
+            view on map
+            <img src="img/map.png" alt="">
+          </span>
+         </div>
+
+        <!-- Rating + Location -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 lg:gap-4 text-sm mb-3">
+          
+          <!-- Stars -->
+          <div class="flex items-center gap-1">
+            
+            <!-- Star SVG -->
+            <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448 1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.364 2.87c-.784.57-1.838-.197-1.539-1.118l1.287-3.957-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.162l1.285-3.957z"/>
+            </svg>
+
+            <!-- Repeat stars -->
+            <svg class="w-[18px] h-[18px] fill-yellow-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448 1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.364 2.87c-.784.57-1.838-.197-1.539-1.118l1.287-3.957-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.162l1.285-3.957z"/></svg>
+            <svg class="w-[18px] h-[18px] fill-yellow-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448 1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.364 2.87c-.784.57-1.838-.197-1.539-1.118l1.287-3.957-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.162l1.285-3.957z"/></svg>
+            <svg class="w-[18px] h-[18px] fill-yellow-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448 1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.364 2.87c-.784.57-1.838-.197-1.539-1.118l1.287-3.957-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.162l1.285-3.957z"/></svg>
+            <svg class="w-[18px] h-[18px] fill-yellow-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448 1.287 3.957c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.364 2.87c-.784.57-1.838-.197-1.539-1.118l1.287-3.957-3.37-2.448c-.783-.57-.38-1.81.588-1.81h4.162l1.285-3.957z"/></svg>
+
+            <span class="text-[#E3E3E3] text-base ml-2">4.5 (420 Reviews)</span>
+          </div>
+
+          <!-- Location -->
+          <div class="flex items-center  gap-1 text-[#E3E3E3] text-base">
+            <img src="img/location.png">
+            Sector 12, RK Puram, New Delhi
+          </div>
+
+        </div>
+
+        <!-- Verified Badge -->
+        <div class="flex items-center gap-1  justify-center lg:justify-start">
+          <span class="bg-[#21A989] text-white text-xs px-3 py-1 rounded-full flex items-center gap-1 w-fit">
+            Verified
+            <img src="img/badge.png">
+          </span>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- ==========   SECTION ========== -->
+  <section class="py-6 lg:py-16 " id="services-sec">
+    <div class="max-w-7xl mx-auto px-4">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6  mx-auto">
+
+        <!-- Left Card -->
+        <div class="bg-[#0070c914] rounded-xl p-6">
+          
+          <!-- Header -->
+          <div class="flex items-center flex-col md:flex-row gap-2 justify-between mb-6">
+            <h3 class="text-lg font-semibold text-[#051229]">Key School Stats</h3>
+
+            <div class="flex items-center gap-4 text-sm">
+              <button class="cursor-pointer flex items-center gap-2 text-[#051229] hover:text-black">
+                Compare
+                <img  class="w-[18px] h-[18px]" src="img/compare.png">
+              </button>
+
+              <button class="flex cursor-pointer  gap-2 border border-[#05122966] px-3 py-1 rounded-full text-[#051229] hover:bg-gray-100">
+                Shortlist <img class="w-[18px] h-[18px]" src="img/wishlist.png">
+              </button>
+            </div>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6  text-sm">
+            
+            <div>
+              <p class="text-base text-[#8C8C8C]">Ownership</p>
+              <p class="font-medium text-[14px] xl:text-[17px] text-[#364052]">Private</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8C8C8C]">Purpose</p>
+              <p class="font-medium text-[14px] xl:text-[17px] text-[#364052]">Day/Residential</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8C8C8C]">Board</p>
+              <p class="font-medium text-[14px] xl:text-[17px] text-[#364052]">CBSE</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8C8C8C]">Medium</p>
+              <p class="font-medium text-[14px] xl:text-[17px] text-[#364052]">English</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8C8C8C]">School Type</p>
+              <p class="font-medium text-[14px] xl:text-[17px] text-[#364052]">Co-Ed</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8C8C8C]">Class Min</p>
+              <p class="font-medium text-[14px] xl:text-[17px] text-[#364052]">Nursery</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8C8C8C]">Class Max</p>
+              <p class="font-medium text-[14px] xl:text-[17px] text-[#364052]">XII</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8C8C8C]">Stream</p>
+              <p class="font-medium text-[14px] xl:text-[17px] text-[#364052]">Arts</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="relative">
+          <img src="img/school.png" alt="School"
+            class="w-full h-full object-cover rounded-[8px]">
+
+          <!-- Play Button -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="bg-[#e9f2ff3d] backdrop-blur-md rounded-full p-1 w-[55px] h-[55px] flex justify-center items-center">
+              <img src="img/Polygon.png" alt="" class="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+
+
+  <!-- ========== tabibg  SECTION ========== -->
+   <section class="py-6 md:py-16" id="tab-sec">
+     <div class="max-w-7xl mx-auto px-4">
+   
+       <!-- Tabs -->
+       <div class="border-b border-[#eadede] mb-6 tab-sec flex match-container items-center gap-[10px] overflow-x-auto no-scrollbar drag-cursor py-[10px] no-scrollbar">
+         <div class="flex gap-[20px] md:gap-[50px] text-[16px] md:text-[18px] text-[#051229] font-medium text-gray-600">
+           <button class="tab-btn pb-3 px-[24px] cursor-pointer border-b-2 border-[#0070C9] text-[#0070C9]" data-tab="overview">Overview</button>
+           <button class="tab-btn pb-3 px-[24px] cursor-pointer border-b-2 border-transparent" data-tab="admissions">Admissions</button>
+           <button class="tab-btn pb-3 px-[24px] cursor-pointer border-b-2 border-transparent" data-tab="fees">Fees</button>
+           <button class="tab-btn pb-3 px-[24px] cursor-pointer border-b-2 border-transparent" data-tab="faculty">Faculty</button>
+           <button class="tab-btn pb-3 px-[24px] cursor-pointer border-b-2 border-transparent" data-tab="reviews">Reviews</button>
+         </div>
+       </div>
+   
+       <!-- Tab Content -->
+       <div id="overview" class="tab-content">
+          <!-- Content -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#eef3f8] p-6 rounded-xl">
+
+            <!-- Left Side -->
+            <div>
+              
+              <!-- School Info -->
+              <h3 class="font-semibold text-[18px] md:text-[24px] text-[#051229] mb-4">School Information</h3>
+
+              <div class="space-y-2 text-sm flex flex-col gap-2">
+                <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[30%]">Affiliation No.</span><span class="text-sm lg:text-[18px] font-medium">845768</span></p>
+                <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[30%]">Principal Name</span><span class="text-sm lg:text-[18px] font-medium">Mr. A. Sharma</span></p>
+                <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[30%]">Remarks</span><span class=" text-sm lg:text-[18px] font-medium">Top CBSE School in Delhi And Its Contest Client</span></p>
+              </div>
+
+              <hr class="my-4 border-gray-300">
+
+              <!-- Address -->
+              <h3 class="font-semibold text-[18px] md:text-[24px] text-[#051229] mb-4">Address & Contact</h3>
+
+              <div class="space-y-3 text-sm lg:text-[18px] text-[#364052] flex flex-col gap-[20px]">
+                
+                <p class="flex items-start gap-2 mb-0">
+                  <img class="w-[20px] h-[20px]" src="img/location-icon.png" alt="">
+                  <span class="text-sm lg:text-[18px]">Sector 12, RK Puram, New Delhi - 110022</span>
+                </p>
+
+                <p class="flex items-center gap-2 mb-0">
+                  <img class="w-[20px] h-[20px]" src="img/phone-icon.png" alt="">
+                  <span class="text-sm lg:text-[18px]">91-11-26171234 / 9384512052</span>
+                </p>
+
+                <p class="flex items-center gap-2 mb-0">
+                  <img class="w-[20px] h-[20px]" src="img/mail-icon.png" alt="">
+                  <span class="text-sm lg:text-[18px]">info@dpsrkpuram.org</span>
+                </p>
+
+                <p class="flex items-center gap-2 mb-0">
+                  <img class="w-[20px] h-[20px]" src="img/language-icon.png" alt="">
+                  <span class="text-sm lg:text-[18px]">www.dpsrkpuram.org</span>
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Right Side (Map) -->
+            <div class="flex flex-col justify-between">
+              
+              <img src="img/map-bg-img.png" alt="Map"
+                class="w-full h-48 object-cover rounded-lg  mb-[40px] flex-1">
+
+              <!-- Buttons -->
+              <div class="flex flex-col md:flex-row gap-2 md:gap-3 cursor-pointer">
+                <button class="bg-[#FDD046] text-[#051229] cursor-pointer px-4 py-2 rounded-full text-sm font-medium hover:bg-yellow-500">
+                  Get Direction
+                </button>
+
+                <button class="bg-[#051229] capitalize text-white cursor-pointer  px-4 py-2 rounded-full text-sm lg:text-base font-medium hover:bg-[#0a2f59] flex items-center gap-2">
+                  view in google map
+                  <img src="img/map.png" alt="">
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+       </div>
+   
+       <div id="admissions" class="tab-content hidden">
+        <div>
+          <!-- School Info -->
+              
+              <!-- Content -->
+               <div class="bg-[#eef3f8] p-6 rounded-xl">
+                <h3 class="font-semibold text-[18px] md:text-[24px] text-[#051229]">Admission Information</h3>
+                 <div class="grid grid-cols-1 md:grid-cols-2  gap-6 bg-[#eef3f8] pt-4 rounded-xl">
+
+                   <div class="space-y-2 text-sm flex flex-col gap-2">
+                      <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[50%] md:w-[35%] whitespace-nowrap">Eligibility (Age) </span><span class="text-sm lg:text-[18px] font-medium">NA</span></p>
+                      <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[50%] md:w-[35%] whitespace-nowrap">Eligibility (Marks)</span><span class="text-sm lg:text-[18px] font-medium">NA</span></p>
+                      <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[50%] md:w-[35%] whitespace-nowrap">Total Seats</span><span class=" text-sm lg:text-[18px] font-medium">NA</span></p>
+                     <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[50%] md:w-[35%] whitespace-nowrap">Written Test</span><span class=" text-sm lg:text-[18px] font-medium">NA</span></p>
+                    </div>
+                    <div class="space-y-2 text-sm flex flex-col gap-2">
+                         <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[50%] md:w-[35%] whitespace-nowrap">Form Availability</span><span class="text-sm lg:text-[18px] font-medium">NA</span></p>
+                         <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[50%] md:w-[35%] whitespace-nowrap">Form Payment</span><span class="text-sm lg:text-[18px] font-medium">NA</span></p>
+                         <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[50%] md:w-[35%] whitespace-nowrap">School Timing</span><span class=" text-sm lg:text-[18px] font-medium">NA</span></p>
+                        <p class="mb-0 flex items-center gap-2 text-[#364052] text-sm lg:text-[18px]"><span class="text-[#8C8C8C] text-sm lg:text-[18px] w-[50%] md:w-[35%] whitespace-nowrap">Office Timing</span><span class=" text-sm lg:text-[18px] font-medium">NA</span></p>
+                       </div>
+                 </div>
+                </div>
+                </div>
+
+        </div>
+        
+       
+   
+       <div id="fees" class="tab-content hidden">
+        <div class="bg-[#eef3f8] p-6 rounded-xl">
+          <p>Fees Content</p>
+        </div>
+       </div>
+   
+       <div id="faculty" class="tab-content hidden">
+        <div class="bg-[#eef3f8] p-6 rounded-xl">
+          <p>Faculty Content</p>
+        </div>
+       </div>
+   
+       <div id="reviews" class="tab-content hidden">
+        <div class="bg-[#eef3f8] p-6 rounded-xl">
+          <p>Reviews Content</p>
+        </div>
+
+       </div>
+   
+     </div>
+   </section>
+
+
+  
+<!-- ========== FOOTER ========== -->
+<footer class="bg-[#0d1b2a] pt-14 pb-0" id="guides">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+      <div class="lg:col-span-2 pr-10">
+        <a href="#" class="flex items-center gap-2 font-bold text-2xl mb-4">
+          <img src="./img/Logo.png">
+        </a>
+        <p class="text-white text-base leading-relaxed mb-5">
+          Our School Management Systems software caters to all the requirements of school including customization and database integration at any given time. Our other offerings include an SMS gateway for educational institutions.
+        </p>
+        <div class="social-wrap">
+          <p class="text-white mb-2">Follow Us</p>
+          <div class="flex items-center gap-2 pl-0">
+            <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+              <i class="fab fa-facebook-f text-sm text-[#1877F2]"></i>
+            </a>
+            <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+              <i class="fab fa-twitter text-sm text-[#1877F2]"></i>
+            </a>
+            <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+              <i class="fab fa-linkedin-in text-sm text-[#1877F2]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h6 class="text-white font-medium text-[19px] tracking-widest mb-4">Useful links</h6>
+        <ul class="flex flex-col gap-2.5 text-[16px] font-normal text-white">
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Home</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">About</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School search</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Contests</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School ERP</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Websites</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Contact us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="text-white font-medium text-[19px] tracking-widest mb-4">Services</h6>
+        <ul class="flex flex-col gap-2.5 text-sm font-normal text-white">
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School Website</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School ERP</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Online Admission</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School search</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Contests</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="text-white font-medium text-[19px] tracking-widest mb-4">Contact</h6>
+        <ul class="flex flex-col gap-3 text-sm font-normal text-white">
+          <li class="flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-whte flex-shrink-0"></i> +91 44 24511099
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-whte flex-shrink-0"></i> info@schoolsindia.com
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-whte flex-shrink-0"></i>  9:30 a.m - 4:30 p.m
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#041e3e] py-5 border-[#4b6785] border-t-1">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-white">
+        <p>Copyright ©Schoolsindia.com All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-blue-400 transition-colors">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Back to Top — hidden by default, JS toggles 'hidden' -->
+<a href="#" id="backToTop" class="hidden fixed bottom-8 right-8 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg shadow-blue-500/40 hover:bg-blue-700 transition-colors z-50">
+  <i data-lucide="arrow-up" class="w-5 h-5"></i>
+</a>
+
+<script>
+  // Search tab switcher
+  function switchTab(tab) {
+    document.querySelectorAll('.search-panel').forEach(p => p.classList.add('hidden'));
+    document.querySelectorAll('.search-tab').forEach(t => {
+      t.classList.remove('border-b-[#0070C9]', 'text-[#0070C9]');
+      t.classList.add('border-b-transparent', 'text-gray-500');
+    });
+    document.getElementById('panel-' + tab).classList.remove('hidden');
+    const active = document.getElementById('tab-' + tab);
+    active.classList.add('text-[#0070C9]', 'border-b-[#0070C9]');
+    active.classList.remove('border-b-transparent', 'text-gray-500');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  });
+</script>
+
+<!-- jQuery + Slick -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const tabs = document.querySelectorAll('.tab-btn');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+
+      // Reset all tabs
+      tabs.forEach(t => {
+        t.classList.remove('text-[#0070C9]', 'border-[#0070C9]');
+        t.classList.add('border-transparent');
+      });
+
+      // Hide all content
+      contents.forEach(c => c.classList.add('hidden'));
+
+      // Activate clicked tab
+      tab.classList.add('text-[#0070C9]', 'border-[#0070C9]');
+      tab.classList.remove('border-transparent');
+
+      // Show content
+      const target = document.getElementById(tab.dataset.tab);
+      if (target) {
+        target.classList.remove('hidden');
+      }
+
+    });
+  });
+
+});
+</script>
+<script>
+   const scroll = document.querySelector(".tab-sec");
+  var isDown = false;
+  var scrollX;
+  var scrollLeft;
+
+// Mouse Up Function
+scroll.addEventListener("mouseup", () => {
+	isDown = false;
+	scroll.classList.remove("active");
+});
+
+// Mouse Leave Function
+scroll.addEventListener("mouseleave", () => {
+	isDown = false;
+	scroll.classList.remove("active");
+});
+
+// Mouse Down Function
+scroll.addEventListener("mousedown", (e) => {
+	e.preventDefault();
+	isDown = true;
+	scroll.classList.add("active");
+	scrollX = e.pageX - scroll.offsetLeft;
+	scrollLeft = scroll.scrollLeft;
+});
+
+scroll.addEventListener("mousemove", (e) => {
+	if (!isDown) return;
+	e.preventDefault();
+	var element = e.pageX - scroll.offsetLeft;
+	var scrolling = (element - scrollX) * 2;
+	scroll.scrollLeft = scrollLeft - scrolling;
+});
+</script>
+
+</body>
+</html>

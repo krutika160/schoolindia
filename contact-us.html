@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+
+  <!-- Tailwind CSS (compiled output) -->
+  <link rel="stylesheet" href="./src/output.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <!-- Font Awesome (brand icons only) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <!-- Slick Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <style>
+    .banner-arrow{
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7486%) hue-rotate(149deg) brightness(125%) contrast(92%);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- ========== TOP BAR ========== -->
+<div class="bg-[#0070C9] text-white text-xs hidden md:flex items-center h-[60px]">
+  <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
+    <div class="flex items-center gap-0">
+      <span class="font-base tracking-wide text-white font-semibold">Join Us Now</span>
+      <img src="./img/white-arrow.svg" alt="arrow">
+      <div class="flex items-center gap-2 pl-3">
+        <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+          <i class="fab fa-facebook-f text-sm text-[#1877F2]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+          <i class="fab fa-twitter text-sm text-[#1877F2]"></i>
+        </a>
+        <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+          <i class="fab fa-linkedin-in text-sm text-[#1877F2]"></i>
+        </a>
+      </div>
+    </div>
+    <div class="flex gap-5 items-center">
+      <span class="flex items-center gap-1.5 font-medium text-base">
+        <img src="./img/clock.svg" alt="Clock"> 9:30 a.m - 4:30 p.m
+      </span>
+      <span class="flex items-center gap-1.5 font-medium text-base border-l border-r border-white px-4">
+        <img src="./img/msg-icon.svg" alt="Massage"><a href="mailto:info@schoolsindia.com">info@schoolsindia.com</a>
+      </span>
+      <span class="flex items-center gap-1.5 font-medium text-base">
+        <img src="./img/call-icon.svg" alt="Call"><a href="callto:+91 98765 43210">+91 98765 43210</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 py-2">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 font-bold text-2xl">
+        <img src="./img/Logo.png" alt="schoolsindia"/>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-700">
+
+        <!-- Home -->
+        <li>
+          <a href="#" class="block px-3 py-2 rounded-lg text-[#051229] text-[#051229] text-base font-semibold transition-all duration-200">Home</a>
+        </li>
+
+        <!-- About Us -->
+        <li>
+          <a href="#about" class="block px-3 py-2 rounded-lg transition-all text-[#051229] text-base duration-200 hover:text-[#051229]">About Us</a>
+        </li>
+
+        <!-- Services (dropdown) -->
+        <li class="relative group">
+          <a href="#services" class="flex items-center gap-1 px-3 py-2 text-[#051229] rounded-lg transition-all text-base duration-200 hover:text-[#051229]">
+            Services <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+          </a>
+          <ul class="absolute top-full left-0 mt-0 bg-white border border-gray-100 rounded-xl shadow-xl w-52 py-2 hidden group-hover:block z-50">
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">School Websites</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">School ERP</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Bulk SMS</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Contests</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Online Admission</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">School Search</a></li>
+          </ul>
+        </li>
+
+        <!-- Contest (dropdown) -->
+        <li class="relative group">
+          <a href="#" class="flex items-center text-base gap-1 px-3 py-2 rounded-lg text-[#051229] transition-all duration-200 hover:text-[#051229]">
+            Contest <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+          </a>
+          <ul class="absolute top-full left-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-xl w-64 py-2 hidden group-hover:block z-50">
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">23rd All India HOPE Talent Contest</a></li>
+            <li><a href="#" class="block px-3 py-2 text-sm hover:bg-blue-50 hover:text-[#051229] transition-colors">Results</a></li>
+          </ul>
+        </li>
+
+        <!-- Online Contest -->
+        <li>
+          <a href="#" class="block px-3 py-2 text-base rounded-lg transition-all duration-200 text-[#051229] hover:text-[#051229]">Online Contest</a>
+        </li>
+
+        <!-- Results -->
+        <li>
+          <a href="#" class="block px-3 py-2 text-base  rounded-lg transition-all duration-200 text-[#051229] hover:text-[#051229]">Results</a>
+        </li>
+
+        <!-- Contact -->
+        <li>
+          <a href="#contact" class="block px-4 text-base  py-2 rounded-lg transition-all duration-200 text-[#051229] hover:text-[#051229]">Contact</a>
+        </li>
+
+      </ul>
+
+      <!-- Right Actions -->
+      <div class="hidden lg:flex items-center gap-2">
+        <a href="#" class="px-2 pr-4 items-center py-2 text-[15px] font-medium text-white bg-[#051229] hover:bg-[#0070C9] rounded-[25px] flex gap-2 transition-all duration-300 ease-in-out"><img src="./img/arrow-icon.svg" class="bg-white rounded-[40px] p-1"> Get a Quote</a>
+      </div>
+
+      <!-- Mobile Toggler -->
+      <button id="menuBtn" class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors">
+        <i data-lucide="menu" class="w-5 h-5 text-gray-700"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu — hidden by default, JS toggles 'hidden' -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 pb-4 pt-2">
+      <ul class="flex flex-col gap-1 text-sm font-medium text-gray-700 mb-4">
+        <li><a href="#" class="block px-4 py-2 rounded-lg text-[#0070C9] font-semibold">Home</a></li>
+        <li><a href="#about" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">About Us</a></li>
+        <!-- Services -->
+        <li>
+          <details class="group">
+            <summary class="flex items-center justify-between px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 hover:text-[#0070C9] list-none">
+              Services <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+            </summary>
+            <ul class="pl-4 mt-1 flex flex-col gap-1">
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">School Websites</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">School ERP</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Bulk SMS</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Contests</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Online Admission</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">School Search</a></li>
+            </ul>
+          </details>
+        </li>
+        <!-- Contest -->
+        <li>
+          <details class="group">
+            <summary class="flex items-center justify-between px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 hover:text-[#0070C9] list-none">
+              Contest <img src="./img/down-arrow.svg" alt="down arrow" class="mt-1">
+            </summary>
+            <ul class="pl-4 mt-1 flex flex-col gap-1">
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">23rd All India HOPE Talent Contest</a></li>
+              <li><a href="#" class="block px-4 py-1.5 text-sm text-gray-600 hover:text-[#0070C9]">Results</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="#" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">Online Contest</a></li>
+        <li><a href="#" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">Results</a></li>
+        <li><a href="#contact" class="block px-4 py-2 rounded-lg transition-all duration-200 hover:text-[#0070C9]">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== BANNER SECTION ========== -->
+ <!-- Section -->
+  <section class="banner  relative  text-white py-8 lg:py-16 overflow-hidden">
+    <!-- Content -->
+    <div class="relative max-w-5xl mx-auto text-center px-4">
+      <div class="flex flex-col gap-2 lg:gap-8 items-center">
+        <!-- Title -->
+        <h1 class="text-2xl md:text-4xl font-semibold">
+          Contact Us
+        </h1>
+  
+        <!-- Breadcrumb -->
+        <div class="flex justify-center text-sm lg:text-base items-center bg-[#5a77a27d] px-4 py-2 gap-2 rounded-full text-white">
+          <a href="#">Home </a>
+          <spn>/ </spn>
+          <a href="#">Contact Us </a>
+        </div>
+      </div>
+      
+
+    </div>
+    
+  </section>
+
+
+
+  <!-- ========== CONTACT BOX SECTION ========== -->
+  <section class="py-4 md:py-10 bg-white" id="contact">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-[24px] md:text-[35px] lg:text-[48px] font-semibold mb-2">Customer Support</h2>
+
+        <div class="flex flex-col gap-[30px]">
+
+          <div class="flex flex-col gap-1">
+            <p class="text-[#364052] text-base mb-0">Feel free to contact us on <a href="#" class="font-bold text-[#0070C9]">support@schoolsindia.com</a> for further assistance or suggestions. </p>
+            <p class="text-[#364052] text-base mb-0">For immediate assistance on your business enquiries please send us an email on <a href="#" class="font-bold text-[#0070C9]">sales@schoolsindia.com</a></p>
+          </div>
+          <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        
+            <!-- Address -->
+            <div class="border border border-[#0070C9] flex flex-col gap-2 rounded-md p-[16px] md:p-[40px] text-center bg-white shadow-sm">
+              <div class="flex justify-center mb-3">
+                <img src="./img/location-icon.png" class="w-[30px] h-[30px]" alt="Location">
+              </div>
+              <p class="text-[#364052] text-sm md:text-base leading-relaxed">
+                240, Pallai Nagar Palavakkam <br>
+                Chennai-600041 <br>
+                Tamilnadu, INDIA
+              </p>
+            </div>
+        
+            <!-- Phone -->
+            <div class="border border border-[#0070C9] flex flex-col gap-2 rounded-md p-[16px] md:p-[40px] text-center bg-white shadow-sm">
+              <div class="flex justify-center mb-3">
+                <img src="./img/phone-icon.png" class="w-[30px] h-[30px]" alt="Call">
+              </div>
+              <a href="tel:+91424511099" class="text-[#364052] text-sm md:text-base">
+                044-24511099
+              </a>
+            </div>
+        
+            <!-- Email -->
+            <div class="border border border-[#0070C9] flex flex-col gap-2 rounded-md p-[16px] md:p-[40px] text-center bg-white shadow-sm">
+              <div class="flex justify-center mb-3">
+                <img src="./img/mail-icon.png" class="w-[30px] h-[30px]" alt="Email">
+              </div>
+              <a href="mailto:info@schoolsindia.com" class="text-[#364052] text-sm md:text-base">
+                info@schoolsindia.com
+              </a>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+     
+
+    
+    </div>
+  </section>
+
+    <!-- ========== LATEST NEWS ========== -->
+  <div class="flex w-full">
+    <div class="bg-[#0070C9] text-white font-semibold text-[21px] px-6 flex items-center justify-center whitespace-nowrap flex-shrink-0">
+      Latest News
+    </div>
+    <div class="bg-[#e5f1fa] flex-1 overflow-hidden py-3 pb-1">
+      <marquee behavior="scroll" direction="left" scrollamount="5" class="text-[16px] text-black">
+        23rd All India HOPE Talent Contest (Art &amp; Essay) started on 20 June 2025 onwards &nbsp;<span style="color:#0070C9;">|</span>&nbsp; 23rd All India HOPE Talent Contest (Art &amp; Essay) &nbsp;<span style="color:#0070C9;">|</span>&nbsp; 23rd All India HOPE Talent Contest (Art &amp; Essay) started on 20 June 2025 onwards
+      </marquee>
+    </div>
+  </div>
+
+  <!-- ========== CTA / CONTACT SECTION ========== -->
+  <section class="py-4 md:py-10 bg-white" id="contact">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-[24px] md:text-[35px] lg:text-[48px] text-left font-semibold mb-[20px]">Send Us a Message</h2>
+        </div>
+      <div class="grid lg:grid-cols-2 gap-4 md:gap-16 items-center">
+        <div class="shadow-sm bg-[#f8fafb] border-[#ced7e0] border-1 rounded-sm py-12 p-8">
+          <form class="grid sm:grid-cols-2 gap-4">
+            <input type="text" placeholder="Enter Your Name"
+              class="w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent placeholder:text-[#364052]"/>
+            <input type="email" placeholder="Email"
+              class="w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent placeholder:text-[#364052]"/>
+            <input type="tel" placeholder="Phone"
+              class="w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent placeholder:text-[#364052]"/>
+            <div class="relative">
+              <select class="w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent appearance-none text-[#364052] cursor-pointer pr-8">
+                <option value="" disabled selected>Select Type</option>
+                <option value="school">School Enquiry</option>
+                <option value="admission">Admission Query</option>
+                <option value="general">General Enquiry</option>
+                <option value="other">Other</option>
+              </select>
+              <img src="./img/down-arrow.svg" alt="" class="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 w-4 h-4"/>
+            </div>
+            <textarea rows="1" placeholder="Describe your project"
+              class="sm:col-span-2 w-full px-1 py-3 text-sm border-0 border-b border-b-gray-300 focus:border-b-[#0070C9] outline-none transition-all bg-transparent resize-none placeholder:text-[#364052]"></textarea>
+            <div class="sm:col-span-2 mt-3">
+              <button onclick="switchTab('school-board')" id="tab-school-board"
+                class="cursor-pointer search-tab px-2 pr-6 items-center py-2 text-[15px] font-medium text-white bg-[#051229] hover:bg-[#0070C9] rounded-[25px] 
+                flex gap-2 transition-all duration-300 ease-in-out">
+                <img src="./img/arrow-icon.svg" class="bg-white rounded-[40px] p-1"> Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="text-center">
+          <img src="img/map-bg-img.png" alt="Contact" class="mx-auto max-h-80"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+<!-- ========== FOOTER ========== -->
+<footer class="bg-[#0d1b2a] pt-14 pb-0" id="guides">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+      <div class="lg:col-span-2 pr-10">
+        <a href="#" class="flex items-center gap-2 font-bold text-2xl mb-4">
+          <img src="./img/Logo.png">
+        </a>
+        <p class="text-white text-base leading-relaxed mb-5">
+          Our School Management Systems software caters to all the requirements of school including customization and database integration at any given time. Our other offerings include an SMS gateway for educational institutions.
+        </p>
+        <div class="social-wrap">
+          <p class="text-white mb-2">Follow Us</p>
+          <div class="flex items-center gap-2 pl-0">
+            <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+              <i class="fab fa-facebook-f text-sm text-[#1877F2]"></i>
+            </a>
+            <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+              <i class="fab fa-twitter text-sm text-[#1877F2]"></i>
+            </a>
+            <a href="#" class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-white transition-all duration-300 hover:bg-blue-50">
+              <i class="fab fa-linkedin-in text-sm text-[#1877F2]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h6 class="text-white font-medium text-[19px] tracking-widest mb-4">Useful links</h6>
+        <ul class="flex flex-col gap-2.5 text-[16px] font-normal text-white">
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Home</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">About</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School search</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Contests</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School ERP</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Websites</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Contact us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="text-white font-medium text-[19px] tracking-widest mb-4">Services</h6>
+        <ul class="flex flex-col gap-2.5 text-sm font-normal text-white">
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School Website</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School ERP</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Online Admission</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">School search</a></li>
+          <li><a href="#" class="transition-all duration-200 hover:text-[#4e7df4] hover:pl-1">Contests</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="text-white font-medium text-[19px] tracking-widest mb-4">Contact</h6>
+        <ul class="flex flex-col gap-3 text-sm font-normal text-white">
+          <li class="flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-whte flex-shrink-0"></i> +91 44 24511099
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-whte flex-shrink-0"></i> info@schoolsindia.com
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-whte flex-shrink-0"></i>  9:30 a.m - 4:30 p.m
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#041e3e] py-5 border-[#4b6785] border-t-1">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-white">
+        <p>Copyright ©Schoolsindia.com All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-blue-400 transition-colors">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Back to Top — hidden by default, JS toggles 'hidden' -->
+<a href="#" id="backToTop" class="hidden fixed bottom-8 right-8 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg shadow-blue-500/40 hover:bg-blue-700 transition-colors z-50">
+  <i data-lucide="arrow-up" class="w-5 h-5"></i>
+</a>
+
+<script>
+  // Search tab switcher
+  function switchTab(tab) {
+    document.querySelectorAll('.search-panel').forEach(p => p.classList.add('hidden'));
+    document.querySelectorAll('.search-tab').forEach(t => {
+      t.classList.remove('border-b-[#0070C9]', 'text-[#0070C9]');
+      t.classList.add('border-b-transparent', 'text-gray-500');
+    });
+    document.getElementById('panel-' + tab).classList.remove('hidden');
+    const active = document.getElementById('tab-' + tab);
+    active.classList.add('text-[#0070C9]', 'border-b-[#0070C9]');
+    active.classList.remove('border-b-transparent', 'text-gray-500');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  });
+</script>
+
+<!-- jQuery + Slick -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+<script>
+   const scroll = document.querySelector(".tab-sec");
+  var isDown = false;
+  var scrollX;
+  var scrollLeft;
+
+// Mouse Up Function
+scroll.addEventListener("mouseup", () => {
+	isDown = false;
+	scroll.classList.remove("active");
+});
+
+// Mouse Leave Function
+scroll.addEventListener("mouseleave", () => {
+	isDown = false;
+	scroll.classList.remove("active");
+});
+
+// Mouse Down Function
+scroll.addEventListener("mousedown", (e) => {
+	e.preventDefault();
+	isDown = true;
+	scroll.classList.add("active");
+	scrollX = e.pageX - scroll.offsetLeft;
+	scrollLeft = scroll.scrollLeft;
+});
+
+scroll.addEventListener("mousemove", (e) => {
+	if (!isDown) return;
+	e.preventDefault();
+	var element = e.pageX - scroll.offsetLeft;
+	var scrolling = (element - scrollX) * 2;
+	scroll.scrollLeft = scrollLeft - scrolling;
+});
+</script>
+
+</body>
+</html>
